@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #080C15;
+    color: #fff; /* Cambiado a blanco para mejor contraste */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.content {
+    text-align: left;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    max-width: 600px;
+}
+
+.subtext {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 400px;
+    line-height: 1.5;
+}
+
+/* Add this new class */
+.highlight {
+    color: #ff0000;
+}
+
+/* Modify menu button styles */
+.menu-button {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-bottom: 50px;
+    transition: all 0.3s ease;
+    border-radius: 50px; /* Make it more cylindrical */
+}
+
+.menu-button:hover {
+    background-color: #e60000;
+}
+
+/* Modify feature items */
+.features {
+    display: flex;
+    gap: 20px;
+    flex-wrap: nowrap;
+}
+
+.feature-item {
+    padding: 22px 30px; /* Changed from 15px to 22px for 50% more height */
+    border-top: none;
+    flex: 1;
+    background: linear-gradient(to right, #808080, transparent);
+    border-radius: 50px;
+    text-align: center;
+}
+
+.feature-item:nth-child(2) {
+    background: linear-gradient(to right, #808080, transparent);
+}
+
+.feature-item:nth-child(3) {
+    background: linear-gradient(to right, #808080, transparent);
+}
+
+.feature-title {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+    color: #fff;
+}
+
+.banner-image {
+    width: 60%; /* Reduced from 80% to 60% */
+    margin: 20px 0; /* Cambiado de 'auto' a '0' para poder mover la imagen */
+    padding: 0;
+    margin-left: 0%; /* Ajusta este valor para mover la imagen:
+                        0% = totalmente a la izquierda
+                        20% = un poco a la derecha
+                        40% = más hacia la derecha
+                        etc. */
+}
+
+.banner-image img {
+    width: 60%;
+    height: 83px; /* Reduced from 250px to 180px */
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.background-right-image {
+    position: fixed;
+    right: 200px; /* Cambiado de -100px a -200px para mover más a la izquierda */
+    top: 0;
+    height: 100vh;
+    width: 500px;
+    z-index: -1;
+    object-fit: cover;
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent,
+        black 30%,
+        black 70%,
+        transparent
+    );
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        black 30%,
+        black 70%,
+        transparent
+    );
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .features {
+        flex-direction: column;
+    }
+    
+    .feature-item {
+        width: 100%;
+    }
+}

@@ -1,0 +1,199 @@
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #E8D9D6;
+    min-height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body {
+    margin: 0;
+    padding: 60px 40px;
+    background-color: #E8D9D6;
+    font-family: 'Manrope', sans-serif;
+    color: #000000;  /* Cambiado a negro */
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Contenedor principal */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    margin-top: 0px; /* Puedes ajustar este valor para mover todo el contenido arriba o abajo */
+    margin-bottom: 100px; /* Ajusta según el alto de tu imagen inferior */
+    position: relative;
+    z-index: 1;
+    display: flex; /* Added flexbox for alignment */
+    align-items: center;
+}
+
+/* Encabezado */
+.main-header {
+    margin-bottom: 80px;
+    max-width: 600px;
+}
+
+.main-header h1 {
+    font-size: 130px; /* Aumentado un 80% desde 72px */
+    font-weight: 700;
+    line-height: 0.9; /* Reducido de 1.1 para acercar más al logo */
+    margin-bottom: 20px;
+    letter-spacing: -1.5px;
+    color: #000000; /* Cambiado a negro */
+}
+
+.header-description {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    color: #000000; /* Cambiado a negro */
+}
+
+/* Botón de menú */
+.menu-btn {
+    display: inline-block;
+    padding: 16px 40px;
+    background-color: #000000;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 30px;
+    margin-left: 50px; /* Añadido para mover a la derecha */
+}
+
+.menu-btn:hover {
+    background-color: #333333;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(230, 122, 122, 0.2);
+}
+
+/* Sección de estadísticas */
+.stats-section {
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    flex: 1;
+    min-width: 250px;
+}
+
+.stat-number {
+    font-size: 56px;
+    font-weight: 700;
+    color: #e67a7a;
+    line-height: 1;
+    margin-bottom: 15px;
+}
+
+.stat-description {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #000000; /* Cambiado a negro */
+}
+
+.logo-image {
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin-top: 0px;
+    margin-bottom: -50px; /* Cambiado de 0% a -50px para subir el título */
+    background: transparent;
+    border: none;
+}
+
+/* Imágenes decorativas */
+.top-right-image {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width:700px; /* Ajusta este valor para hacer la imagen más grande o pequeña */
+    height: auto;
+    z-index: 1;
+}
+
+.bottom-image {
+    position: absolute;
+    bottom: 0;
+    left: 50%; /* Cambiado de 0 a 50% */
+    transform: translateX(-50%); /* Añadido para centrar */
+    width: 1100px; /* Cambiado de 40% a un valor fijo */
+    height: 160px;
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    body {
+        padding: 40px 30px;
+    }
+    
+    .main-header h1 {
+        font-size: 56px;
+    }
+    
+    .stats-section {
+        gap: 40px;
+    }
+    
+    .stat-number {
+        font-size: 48px;
+    }
+
+    .top-right-image {
+        width: 300px; /* Ajustado para tablets */
+    }
+    
+    .bottom-image {
+        height: 200px; /* Ajustado para tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 30px 20px;
+    }
+    
+    .main-header h1 {
+        font-size: 42px;
+    }
+    
+    .header-description {
+        font-size: 16px;
+    }
+    
+    .menu-btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .stat-item {
+        min-width: 100%;
+    }
+    
+    .stat-number {
+        font-size: 40px;
+    }
+
+    .top-right-image {
+        width: 200px; /* Ajustado para móviles */
+    }
+    
+    .bottom-image {
+        height: 150px; /* Ajustado para móviles */
+    }
+}

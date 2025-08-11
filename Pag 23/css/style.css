@@ -1,0 +1,278 @@
+/* Variables y Reset */
+:root {
+    --primary-color: #000000; /* Changed from green to black */
+    --secondary-color: #000000; /* Changed to black */
+    --text-dark: #000000; /* Changed to black */
+    --text-light: #333333; /* Changed to darker gray */
+    --light-bg: #F1F8E9;
+    --divider-color: #C8E6C9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-dark);
+    background-color: white;
+    line-height: 1.6;
+    padding: 3rem 4rem; /* Increased side padding from 2rem to 4rem */
+}
+
+/* Layout */
+.container {
+    max-width: 1200px; /* Increased from 1000px */
+    margin: 0 auto;
+    padding: 0 2rem; /* Added horizontal padding */
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+    max-width: 1000px;
+}
+
+.hero-content {
+    flex: 0 0 60%;
+}
+
+.hero-image {
+    flex: 0 0 35%;
+    height: 450px; /* Reduced from 600px */
+    overflow: hidden;
+    border-radius: 30px;
+    box-shadow: none;
+    margin: 0 1rem; /* Added margin on sides */
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.hero-image:hover img {
+    transform: scale(1.05);
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--primary-color);
+}
+
+.description {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    max-width: 600px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #4A3728; /* Changed to dark brown */
+    color: white;
+    padding: 0.8rem 3rem;  /* Increased horizontal padding */
+    border-radius: 50px;   /* Increased border radius for more cylindrical look */
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+    transition: all 0.3s ease;
+    width: fit-content;
+    box-shadow: 0 4px 8px rgba(46, 125, 50, 0.2);  /* Added shadow for depth */
+}
+
+.cta-button:hover {
+    background-color: #362A1F; /* Darker brown for hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(46, 125, 50, 0.3);  /* Enhanced shadow on hover */
+}
+
+/* Divider */
+.divider {
+    height: 1px;
+    background-color: var(--divider-color);
+    width: 100%;
+}
+
+/* Chef Section */
+.chef-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 800px;  /* Increased from 600px */
+    margin-left: auto;
+    text-align: right;
+    position: relative;  /* Added */
+    padding-left: 100px;  /* Added padding for left image */
+    margin-top: -2rem; /* Added to move section up */
+    padding-right: 0; /* Added to allow image to reach edge */
+}
+
+.chef-section h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    text-align: right; /* Add this to align text to the right */
+}
+
+.chef-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 4rem;
+    margin: 2rem 0;
+    position: relative;
+    padding-left: 350px; /* Space for the left image */
+}
+
+.chef-description {
+    font-size: 1rem;
+    color: #000000; /* Changed to black */
+    line-height: 1.7;
+    text-align: right;
+    margin: 0;
+}
+
+.chef-images {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+
+.small-image {
+    width: 280px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.small-image:hover {
+    transform: translateY(-5px);
+}
+
+.small-image.left {
+    position: absolute;
+    left: -300px;  /* Adjusted to accommodate larger width */
+    width: 480px;  /* Increased by 60% from 300px */
+    height: 290px; /* Increased by 60% from 180px */
+    object-fit: contain;
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    top: -80px; /* Added to move image up */
+}
+
+.small-image.right {
+    width: 500px; /* Fixed width */
+    height: 220px;
+    object-fit: contain;
+    margin-top: 2rem;
+    margin-left: auto; 
+    margin-right: 0; /* Changed from -100px to 0 to align with text */
+    background-color: transparent;
+    padding: 0;
+    position: relative; /* Added */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    body {
+        padding: 2rem 2rem; /* Adjusted responsive padding */
+    }
+    
+    h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-section, .chef-section {
+        max-width: 100%;
+    }
+    
+    .cta-button {
+        padding: 0.7rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .chef-section h3 {
+        font-size: 1.5rem;
+    }
+
+    .hero-section {
+        flex-direction: column;
+    }
+
+    .hero-content, .hero-image {
+        flex: 0 0 100%;
+    }
+
+    .hero-image {
+        height: 400px;
+    }
+
+    .small-image {
+        width: 220px;
+        height: 160px;
+    }
+
+    .small-image.right {
+        width: 260px;
+        height: 200px;
+    }
+
+    .chef-content {
+        flex-direction: column;
+        align-items: flex-end;
+        padding-left: 0;
+        gap: 2rem;
+    }
+
+    .small-image.left {
+        position: static;
+        width: 100%;
+        height: 250px;
+        max-width: 480px;
+    }
+
+    .small-image.right {
+        height: 180px;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 1.5rem 1rem;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .description, .chef-description {
+        font-size: 0.95rem;
+    }
+
+    .small-image, .small-image.right {
+        width: 100%;
+        height: 200px;
+    }
+}

@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .main-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  .image-container {
+    width: 50%;
+    height: 100%; 
+  }
+  .room-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .text-container {
+    width: 50%;
+    margin-left: 10%;
+    margin-bottom: 20%;
+  }
+  
+  .text-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .text-container p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .explore-btn {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .explore-btn:hover {
+    background-color: #333;
+  }
+  .list-section {
+    display: flex;
+    flex-direction: column;
+  }
+  .list-item {
+    display: flex;
+    align-items: flex-start;
+    margin-left: 55%;
+    margin-top: 30px;
+  }
+  .list-number {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: right; 
+    width: 30px;
+  }
+  .list-item p {
+    flex: 1;
+  }
+  @media (max-width: 768px) {
+    .main-section {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .image-container,
+    .text-container {
+      width: 100%;
+    }
+  
+    .room-image {
+      margin-bottom: 20px;
+    }
+  
+    .list-item {
+      flex-direction: column-reverse; /* En pantallas pequeñas, coloca el número arriba del texto */
+    }
+  
+    .list-number {
+      margin-bottom: 10px;
+    }
+  }
